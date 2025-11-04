@@ -23,3 +23,385 @@ footer { margin-top:18px; text-align:center; color:#666; font-size:.85rem; }
   .meta { width:100%; justify-content:space-between; }
   .table th, .table td { font-size:.9rem; }
 }
+
+/* ===== LOGIN PAGE STYLES ===== */
+
+.login-body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-card h1 {
+    margin-bottom: 1.2rem;
+    color: #1e293b;
+    font-size: 1.6rem;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.login-card label {
+    text-align: left;
+    color: #334155;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.login-card input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+.btn-login {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-login:hover {
+    background: #2563eb;
+}
+
+.alert.error {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-card .footer {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* ===== INTERFAZ PRINCIPAL PROFESIONAL ===== */
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #eef2ff 50%, #e0e7ff 100%);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 3rem 3.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ----- HEADER ----- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* ----- BUTTONS ----- */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+}
+
+.btn.danger {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 3px 8px rgba(220, 38, 38, 0.3);
+}
+.btn.danger:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  box-shadow: 0 6px 15px rgba(185, 28, 28, 0.4);
+}
+.btn.small { padding: 6px 12px; font-size: 0.85rem; }
+
+/* ----- TABLE ----- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #1e40af;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table th, .table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.table tbody tr {
+  transition: background 0.25s ease;
+}
+.table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+.table tbody tr:hover {
+  background: #e0e7ff;
+}
+
+/* ----- ALERTS ----- */
+.alert {
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+.alert.success {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+/* ----- PAGINATION ----- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.pagination a {
+  background: #2563eb;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.pagination a:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* ----- FOOTER ----- */
+footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 1.5rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .meta { flex-wrap: wrap; }
+  .table th, .table td { font-size: 0.9rem; padding: 10px; }
+}
+
+/* ===== LOGOUT PAGE (diseño profesional) ===== */
+
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #1e3a8a 100%);
+    color: #e2e8f0;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+.logout-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    animation: wave 1.5s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.logout-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 0.8rem;
+}
+
+.logout-container p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+}
+
+.logout-container .username {
+    color: #a5b4fc;
+    font-weight: 600;
+}
+
+.logout-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-logout {
+    background: linear-gradient(135deg, #4338ca, #3730a3);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(67, 56, 202, 0.4);
+}
+
+.btn-logout:hover {
+    background: linear-gradient(135deg, #3730a3, #312e81);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(55, 48, 163, 0.6);
+}
+
+.btn-cancel {
+    background: transparent;
+    border: 2px solid #64748b;
+    color: #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-cancel:hover {
+    background: rgba(148, 163, 184, 0.15);
+    border-color: #a5b4fc;
+    color: #f8fafc;
+}
+
+.error-message {
+    background: #7f1d1d;
+    border: 1px solid #ef4444;
+    color: #fca5a5;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 380px;
+}
+
+.logout-footer {
+    margin-top: 2.5rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}

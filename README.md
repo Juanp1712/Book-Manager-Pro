@@ -59,7 +59,7 @@ book_manager_grupo_6/
 2. Iniciar Apache desde XAMPP.
 3. Navegar a  
    ```
-   http://localhost/book_manager_grupo_6/install.php
+   http://localhost/grupo6-3pm.crnube.org/book_manager_grupo_6/login.php
    ```
 4. Se generará la base de datos en `data/book_manager.db`.
 
@@ -75,7 +75,7 @@ docker run -p 8080:80 -v "$(pwd):/var/www/html" book-manager-pro
 ```
 
 Abrir en el navegador:  
-http://localhost:8080/install.php
+http://localhost:8080/grupo6-3pm.crnube.org/book_manager_grupo_6/login.php
 
 ---
 
@@ -89,11 +89,11 @@ cd Book-Manager-Pro/book_manager_grupo_6
 docker compose up --build
 ```
 
-Abrir: http://localhost:8080/install.php
+Abrir: http://localhost:8080/grupo6-3pm.crnube.org/book_manager_grupo_6/login.php
 
 ---
 
-Si no existe la base de datos, install.php crea las tablas, el usuario admin, inserta datos de prueba y redirige automáticamente a login.php
+Si no existe la base de datos, login.php crea las tablas, el usuario admin, inserta datos de prueba.
 
 ##  Credenciales iniciales
 
